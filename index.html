@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sudoku</title>
+  <link href="stylesheets/sudoku.css" media="all" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <!-- No need to add shims here -->
+</head>
+<body>
+  <div class="container">
+    <div class="sudoku-board">
+      <div class="row">
+        <div class="cell top-bold left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold right-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell  left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell right-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell  left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell right-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell top-bold left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold  left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold right-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell right-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell right-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell top-bold left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell top-bold right-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+      </div> 
+       
+      <div class="row">
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell left-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell right-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell left-bold bottom-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell bottom-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell bottom-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell left-bold bottom-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell bottom-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell bottom-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell left-bold bottom-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell bottom-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+        <div class="cell bottom-bold right-bold">
+          <input size="2" autocomplete="off" maxlength="1">
+        </div>
+      </div>   
+    </div>
+  </div>
+
+  <!-- TODO -->
+  <div class="footer">
+  </div>
+</body>
+
+</html>

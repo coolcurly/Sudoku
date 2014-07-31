@@ -1,0 +1,30 @@
+.sudoku-board {
+  width: 30vw;
+  height: 30vw; }
+  .sudoku-board .row .cell {
+    width: 3vw;
+    height: 3vw;
+    border-left: #828282 solid 1px;
+    border-top: #828282 solid 1px;
+    text-align: center;
+    float: left; }
+    .sudoku-board .row .cell input {
+      font: 2vw "lucida handwriting","comic sans ms";
+      color: #FF6600;
+      outline: none;
+      border: solid 0 #fff;
+      text-align: center;
+      margin: 0;
+      width: 24pt; }
+
+.top-bold {
+  border-top: #828282 solid 2px !important; }
+
+.left-bold {
+  border-left: #828282 solid 2px !important; }
+
+.bottom-bold {
+  border-bottom: #828282 solid 2px !important; }
+
+.right-bold {
+  border-right: #828282 solid 2px !important; }
