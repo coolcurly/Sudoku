@@ -1,0 +1,53 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin border-shadow($shadow) {
+	-moz-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+@mixin background($color1, $color2) {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, $color1), color-stop(1, $color2) );
+	background:-moz-linear-gradient( center top, $color1 5%, $color2 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color1}', endColorstr='#{$color2}');
+	background-color:$color1;
+}
+
+.btn {
+	margin-top: 10px;
+
+	@include background(#b8e356, #a5cc52);
+	@include border-shadow(inset 0px 1px 0px 0px #d9fbbe);
+	@include border-radius(6px);
+	
+	text-indent:0;
+	border:1px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font: {
+		family: Arial;
+		size: 15px;
+		weight: bold;
+		style: normal;
+	}
+	height:50px;
+	line-height:50px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #86ae47;
+
+	&:hover {
+		@include background(#a5cc52, #b8e356);
+	}
+
+	&:active {
+		position:relative;
+		top:1px;
+	}
+}

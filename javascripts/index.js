@@ -3,21 +3,40 @@ $(document).ready(function(){
 		var sudoku = new Sudoku();
 
 		var board = [
-			[5, 3, null, null, 7, null, null, null, null],
-			[6, null, null, 1, 9, 5, null, null, null],
-			[null, 9, 8, null, null, null, null, 6, null],
-			[8, null, null, null, 6, null, null, null, 3],
-			[4, null, null, 8, null, 3, null, null, 1],
-			[7, null, null, null, 2, null, null, null, 6],
-			[null, 6, null, null, null, null, 2, 8, null],
-			[null, null, null, 4, 1, 9, null, null, 5],
-			[null, null, null, null, 8, null, null, 7, 9]
+			["5", "3", "", "", "7", "", "", "", ""],
+			["6", "", "", "1", "9", "5", "", "", ""],
+			["", "9", "8", "", "", "", "", "6", ""],
+			["8", "", "", "", "6", "", "", "", "3"],
+			["4", "", "", "8", "", "3", "", "", "1"],
+			["7", "", "", "", "2", "", "", "", "6"],
+			["", "6", "", "", "", "", "2", "8", ""],
+			["", "", "", "4", "1", "9", "", "", "5"],
+			["", "", "", "", "8", "", "", "7", "9"]
 		];
 
 		var sudokuHtml = new EJS({url: '/javascripts/templates/board.ejs'}).render({
 			'board' : board
 		});
 
-		$('.container').append(sudokuHtml);
+		$('#sudoku-form').prepend(sudokuHtml);
+
+		$('#validate').click(function(e){
+			var rawData = $('#sudoku-form').serializeArray();
+			var boardData = [[],[],[],[],[],[],[],[],[]];
+
+			$.each(rawData, function(i, d){
+				var coords = d.name.split('_');
+				boardData[coords[0]][coords[1]] = d.value;
+			});
+
+			if (sudoku.validateSoduku(boardData)){
+				alert("You are genius! You solved the puzzle.");
+			}
+			else {
+				alert("Incorrect solution. Try again.");
+			}
+
+			return false;
+		});
 	});
 });
