@@ -22,22 +22,26 @@
 				margin: 0;
 				width: 24pt;
 			}
+
+			input.dark {
+				color: #000000;
+			}
 		}
 	}
 }
 
-.top-bold {
+.row0, .row3, .row6 {
 	border-top: #828282 solid 2px !important;
 }
 
-.left-bold {
+.col0, .col3, .col6 {
 	border-left: #828282 solid 2px !important;
 }
 
-.bottom-bold {
+.row8 {
 	border-bottom: #828282 solid 2px !important;
 }
 
-.right-bold {
+.col8 {
 	border-right: #828282 solid 2px !important;
 }
