@@ -1,10 +1,10 @@
 <div class="sudoku-board">
-  <% for(var i=0; i<matrix.length; i++) {%>
+  <% for(var i=0; i<board.length; i++) {%>
     <div class="row">
-    <% for(var j=0; j<matrix[0].length; j++) {%>
+    <% for(var j=0; j<board[0].length; j++) {%>
       <div class="cell <%= 'row' + i + ' ' + 'col' + j%>">
-        <% if (matrix[i][j] !== null) {%>
-          <input size="2" autocomplete="off" maxlength="1" readonly value="<%= matrix[i][j] %>" name="<%= ''+ i + '_' + j %>">
+        <% if (board[i][j] !== null) {%>
+          <input size="2" autocomplete="off" maxlength="1" readonly value="<%= board[i][j] %>" name="<%= ''+ i + '_' + j %>">
         <% } else {%>
           <input class="dark" size="2" autocomplete="off" maxlength="1" name="<%= ''+ i + '_' + j %>">
         <% } %>

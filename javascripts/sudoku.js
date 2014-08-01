@@ -1,18 +1,74 @@
-$(document).ready(function(){
-	var matrix = [
-		[5, 3, null, null, 7, null, null, null, null],
-		[6, null, null, 1, 9, 5, null, null, null],
-		[null, 9, 8, null, null, null, null, 6, null],
-		[8, null, null, null, 6, null, null, null, 3],
-		[4, null, null, 8, null, 3, null, null, 1],
-		[7, null, null, null, 2, null, null, null, 6],
-		[null, 6, null, null, null, null, 2, 8, null],
-		[null, null, null, 4, 1, 9, null, null, 5],
-		[null, null, null, null, 8, null, null, 7, 9]
-	];
-	var sudoku = new EJS({url: '/javascripts/templates/board.ejs'}).render({
-		'matrix' : matrix
-	});
+(function() {
+  define([], function() {
+    var Sudoku;
+    return Sudoku = (function() {
+      function Sudoku(options) {}
 
-	$('.container').append(sudoku);
-});
+
+      // internal method
+      Sudoku.prototype._validateBoard = function(board) {
+        for (var i = 0; i < 9; i++) {
+          for (j = 0; j < 9; j++) {
+            var val = parseInt(board[i][j]);
+            if (!val || val < 1 || val > 9) {
+              return false;
+            }
+          }
+        }
+        return true;
+      };
+
+
+      // validate if a board is a valid board
+      Sudoku.prototype.validateSoduku = function(board) {
+        if (!this._validateBoard(board)) {
+          return false;
+        }
+
+        // validate rows
+        for (var i = 0; i < 9; i++) {
+          var digits = [0,0,0,0,0,0,0,0,0];
+          
+          for (var j = 0; j < 9; j++) {
+            digits[board[i][j] - 1] = 1;
+          }
+
+          if (digits.join('') !== "111111111") return false;
+        }
+
+        // validate columns
+        for (var i = 0; i < 9; i++) {
+          var digits = [0,0,0,0,0,0,0,0,0];
+
+          for (var j = 0; j < 9; j++) {
+            digits[board[j][i] - 1] = 1;
+          }
+
+          if (digits.join('') !== "111111111") return false;
+        }
+
+        // validte 3x3 grids
+        for (var i = 0; i < 3; i++) {
+          for (var j = 0; j < 3; j++) {
+            var digits = [0,0,0,0,0,0,0,0,0];
+            for (var k = 0; k < 9; k++) {
+              digits[board[i*3 + Math.floor(k/3)][j*3 + k%3] - 1] = 1;
+            }
+
+            if (digits.join('') !== "111111111") return false;
+          }
+        }
+        
+        return true;
+
+      };
+
+      //TODO: board generator
+      Sudoku.prototype.generateSoduku = function(){};
+
+      return Sudoku;
+
+    })();
+  });
+
+}).call(this);
