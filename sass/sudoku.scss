@@ -1,7 +1,6 @@
 .sudoku-board {
-	width: 30vw;
-	height: 30vw;
-
+	font-size: 0;
+	text-align: center;
 	.row {
 		.cell {
 			width: 3vw;
@@ -11,7 +10,7 @@
 			border-top: #828282 solid 1px;
 			
 			text-align: center;
-			float: left;
+			display: inline-block;
 
 			input {
 				font: 2vw "lucida handwriting","comic sans ms";

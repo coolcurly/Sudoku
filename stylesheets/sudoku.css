@@ -1,13 +1,13 @@
 .sudoku-board {
-  width: 30vw;
-  height: 30vw; }
+  font-size: 0;
+  text-align: center; }
   .sudoku-board .row .cell {
     width: 3vw;
     height: 3vw;
     border-left: #828282 solid 1px;
     border-top: #828282 solid 1px;
     text-align: center;
-    float: left; }
+    display: inline-block; }
     .sudoku-board .row .cell input {
       font: 2vw "lucida handwriting","comic sans ms";
       color: #FF6600;
