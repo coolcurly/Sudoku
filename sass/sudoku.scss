@@ -55,16 +55,6 @@
 	text-align: center;
 }
 
-// disable spin buttons 
-input[type=number] {
-    -moz-appearance:textfield;
-}
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 // larger screen
 @media screen and (min-width: 28.75em) {
 	.sudoku-board {
