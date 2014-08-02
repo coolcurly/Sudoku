@@ -1,8 +1,4 @@
-@mixin border-sizing($value) {
-	-webkit-box-sizing: $value;
-	-moz-box-sizing: $value;
-	box-sizing: $value;
-}
+@import 'mixins';
 
 .sudoku-board {
 	font-size: 0;

@@ -1,15 +1,4 @@
-@mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	border-radius: $radius;
-}
-
-@mixin border-shadow($shadow) {
-	-moz-box-shadow: $shadow;
-	-webkit-box-shadow: $shadow;
-	box-shadow: $shadow;
-}
+@import 'mixins';
 
 @mixin background($color1, $color2) {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, $color1), color-stop(1, $color2) );
