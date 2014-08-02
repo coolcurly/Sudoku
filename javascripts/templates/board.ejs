@@ -1,15 +1,17 @@
-<div class="sudoku-board">
-  <% for(var i=0; i<board.length; i++) {%>
-    <div class="row">
-    <% for(var j=0; j<board[0].length; j++) {%>
-      <div class="cell <%= 'row' + i + ' ' + 'col' + j%>">
-        <% if (board[i][j] && parseInt(board[i][j])) {%>
+<table class="sudoku-board">
+  <tbody>
+    <% for(var i=0; i<board.length; i++) {%>
+      <tr class="row">
+        <% for(var j=0; j<board[0].length; j++) {%>
+        <td class="cell <%= 'row' + i + ' ' + 'col' + j%>">
+          <% if (board[i][j] && parseInt(board[i][j])) {%>
           <input size="2" autocomplete="off" maxlength="1" readonly value="<%= board[i][j] %>" name="<%= ''+ i + '_' + j %>">
-        <% } else {%>
+          <% } else {%>
           <input class="dark" type="text" pattern="\d*" size="2" autocomplete="off" maxlength="1" name="<%= ''+ i + '_' + j %>">
+          <% } %>
+        </td>
         <% } %>
-      </div>
-    <% } %>
-    </div>
-  <% } %>  
-</div>
+      </tr>
+    <% } %>  
+  </tbody>
+</table>
