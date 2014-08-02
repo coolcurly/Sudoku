@@ -6,7 +6,7 @@
         <% if (board[i][j] && parseInt(board[i][j])) {%>
           <input size="2" autocomplete="off" maxlength="1" readonly value="<%= board[i][j] %>" name="<%= ''+ i + '_' + j %>">
         <% } else {%>
-          <input class="dark" size="2" autocomplete="off" maxlength="1" name="<%= ''+ i + '_' + j %>">
+          <input class="dark" type="text" pattern="\d*" size="2" autocomplete="off" maxlength="1" name="<%= ''+ i + '_' + j %>">
         <% } %>
       </div>
     <% } %>
