@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 .sudoku-board {
   font-size: 0;
   margin: 0px auto;
@@ -9,7 +10,7 @@
     border-top: #828282 solid 1px;
     text-align: center; }
     .sudoku-board .row .cell input {
-      font: 18px "lucida handwriting","comic sans ms";
+      font: 18px "lucida handwriting", 'Source Sans Pro', sans-serif;
       color: #FF6600;
       outline: none;
       border: solid 0 #fff;
@@ -37,9 +38,14 @@
 .container {
   text-align: center; }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
 @media screen and (min-width: 28.75em) {
   .sudoku-board .row .cell {
     width: 45px;
     height: 45px; }
     .sudoku-board .row .cell input {
-      font: 30px "lucida handwriting","comic sans ms"; } }
+      font: 30px "lucida handwriting", 'Source Sans Pro', sans-serif; } }

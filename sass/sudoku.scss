@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
 @import 'mixins';
 
 .sudoku-board {
@@ -15,7 +17,7 @@
 			text-align: center;
 
 			input {
-				font: 18px "lucida handwriting","comic sans ms";
+				font: 18px "lucida handwriting", 'Source Sans Pro', sans-serif;
 				color: #FF6600;
 				outline: none;
 				border: solid 0 #fff;
@@ -53,6 +55,13 @@
 	text-align: center;
 }
 
+// disable spin buttons 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 // larger screen
 @media screen and (min-width: 28.75em) {
 	.sudoku-board {
@@ -62,7 +71,7 @@
 				height: 45px;
 
 				input {
-					font: 30px "lucida handwriting","comic sans ms";
+					font: 30px "lucida handwriting", 'Source Sans Pro', sans-serif;
 				}
 			}
 		}
