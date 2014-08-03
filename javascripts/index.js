@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	require(['/javascripts/sudoku.js'], function(Sudoku){
-		var sudoku = new Sudoku();
 
 		var board = [
 			["5", "3", "", "", "7", "", "", "", ""],
@@ -14,11 +13,21 @@ $(document).ready(function(){
 			["", "", "", "", "8", "", "", "7", "9"]
 		];
 
-		var sudokuHtml = new EJS({url: '/javascripts/templates/board.ejs'}).render({
-			'board' : board
-		});
+		function _renderBoard(board) {
 
-		$('#sudoku-form').prepend(sudokuHtml);
+			$('#sudoku-form').empty();
+
+			var sudokuHtml = new EJS({url: '/javascripts/templates/board.ejs'}).render({
+				'board' : board
+			});
+
+			$('#sudoku-form').prepend(sudokuHtml);
+		}
+
+		// render initial puzzle
+		_renderBoard(board);
+
+		var sudoku = new Sudoku();
 
 		$('#validate').click(function(e){
 			var rawData = $('#sudoku-form').serializeArray();
@@ -35,6 +44,13 @@ $(document).ready(function(){
 			else {
 				alert("Incorrect solution. Try again.");
 			}
+
+			return false;
+		});
+
+		$('#next').click(function(e){
+			board = sudoku.generateSoduku();
+			_renderBoard(board);
 
 			return false;
 		});

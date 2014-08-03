@@ -9,6 +9,7 @@
 
 .btn {
 	margin-top: 10px;
+	margin-right: 20px;
 
 	@include background(#b8e356, #a5cc52);
 	@include border-shadow(inset 0px 1px 0px 0px #d9fbbe);

@@ -118,14 +118,16 @@
 
       // erase cells from a sudoku solution
       function _eraseCells(board) {
-        // decide how many cells to erase (between 50 and 60)
-        var cellsToErase = Math.floor((Math.random() * 1000) + 1) % 10 + 50;
+        // decide how many cells to erase (between 40 and 50)
+        var cellsToErase = Math.floor((Math.random() * 1000) + 1) % 10 + 40;
 
         for (var n = 0; n < cellsToErase; n++) {
           while (true) {
             var index = Math.floor((Math.random() * 10000) + 1) % 81;
             var i = Math.floor(index / 9);
             var j = index % 9;
+
+            if (!board[i][j]) continue;
 
             var count = 0;
             for (var k = 0; k < 9; k++) {
@@ -203,7 +205,6 @@
 
       // generate a soduku
       Sudoku.prototype.generateSoduku = function() {
-        var testBoard = null;
         var board = null;
         do {
           board = [
