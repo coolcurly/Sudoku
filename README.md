@@ -1,5 +1,6 @@
+The sudoku game is deployed to: http://easy-sudoku.herokuapp.com/
 
-Most fun game ever! What is sudoku? Read http://en.wikipedia.org/wiki/Sudoku
+What is sudoku? Read http://en.wikipedia.org/wiki/Sudoku
 
 ## Supported browsers
 Latest Firefox/Chrome/Safari, IE 10 and above, Android/iOS browsers. Might also be compatible with other mordern browers.
